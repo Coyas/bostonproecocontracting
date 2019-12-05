@@ -2,12 +2,12 @@
   "name": "bostoncontracting",
   "version": "1.0.0",
   "description": "landing page to Home Boston Eco Pro Contracting",
-  "main": "index.html",
+  "main": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "html"
+    "html, php"
   ],
   "author": "Ailton Mendes Duarte",
   "license": "ISC"

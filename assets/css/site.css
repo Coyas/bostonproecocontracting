@@ -1,8 +1,14 @@
+/**
+pagina home (index.html)
+
+**/
+
+
 nav#nav {
     background-color: white !important;
 }
 .imgcentro {
-    width: 42% !important;
+    width: 34% !important;
 }
 figcaption {
     font-size: 4rem;
@@ -29,20 +35,46 @@ p a {
     margin-top: -2%;
     width: 70%;
 }
+ul{
+    list-style-type: none;
+}
 .text {
     margin-top: 6%;
+    font-weight: 300;
 }
 .text .cabe {
     color: green;
     font-weight: bold;
-}
-.text .rabu {
-    /* font-size: 13px; */
+    margin-bottom: 1.5%;
 }
 .text .corpo {
-    /* font-size: 13px; */
+    font-size: 14px;
     margin-bottom: -1%;
 }
-#nav .row .logo {
-    margin-right: -7% ;
+.text .rabu {
+    font-size: 11px;
 }
+#nav .row .logo {
+    margin-right: -10%;
+}
+footer {
+    color: gray;
+}
+
+.msg img {
+    width: 5%;
+    position: fixed;
+    bottom: 5%;
+    right: 10%;
+}
+.msg i {
+    /* width: 15%; */
+    position: fixed;
+    bottom: 15%;
+    right: 12.1%;
+    color: green;
+}
+
+/**
+fim de index.html
+**/

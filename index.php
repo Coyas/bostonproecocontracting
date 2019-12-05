@@ -55,10 +55,15 @@
         </div>
     </section>
 
+    <div class="msg">
+    <i class="fas fa-long-arrow-alt-down"></i>
+        <img src="assets/img/Log-06.svg" alt="send a message">
+    </div>
+
     <footer class="container">
         <div class="row">
             <div class="col-md-12">
-                &copy; 2020 Home Boston Eco Pro Contracting
+                &copy; <?= Date('Y'); ?> Home Boston Eco Pro Contracting
             </div>
         </div>
     </footer>
