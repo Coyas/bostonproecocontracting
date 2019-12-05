@@ -1,0 +1,27 @@
+nav#nav {
+    background-color: white !important;
+}
+.imgcentro {
+    width: 42% !important;
+}
+figcaption {
+    font-size: 4rem;
+}
+.con {
+    font-size: 0.84rem;
+    margin-top: -1.5%;
+}
+.con img {
+    background-color: black;
+}
+.tel a {
+    background-color: green;
+    color: white;
+    padding: 0.5%;
+}
+.fa-map-marker-alt {
+    margin-right: 1%;
+}
+p a {
+    color: black;
+}
