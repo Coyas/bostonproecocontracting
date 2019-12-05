@@ -1,0 +1,14 @@
+{
+  "name": "bostoncontracting",
+  "version": "1.0.0",
+  "description": "landing page to Home Boston Eco Pro Contracting",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html"
+  ],
+  "author": "Ailton Mendes Duarte",
+  "license": "ISC"
+}
