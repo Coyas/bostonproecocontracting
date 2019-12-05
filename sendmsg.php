@@ -16,17 +16,25 @@
   </head>
   <body>
 
-  <section class="container">
+  <section class="container-fluid">
+    <div class="row">
+        <div id="sendMsg" class="col-md-6">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul>
+                       <li class="head">Home Boston Eco Pro Contracting</li>
+                       <li class="furo"><i class="fas fa-long-arrow-alt-left"></i><a href="index.php"> BACK TO HOME</a></li>
+                   </ul>
+               </div>
+           </div>
 
-  </section>
+        </div>
+        <div id="text" class="col-md-6">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                &copy; <?= Date('Y'); ?> Home Boston Eco Pro Contracting
-            </div>
+            <p class="footer">&copy; <?= Date('Y'); ?> Home Boston Eco Pro Contracting</p>
         </div>
     </div>
+  </section>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

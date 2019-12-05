@@ -56,8 +56,8 @@
     </section>
 
     <div class="msg">
-    <i class="fas fa-long-arrow-alt-down"></i>
-        <img src="assets/img/Log-06.svg" alt="send a message">
+        <i class="fas fa-long-arrow-alt-down"></i>
+        <a href="#"><img src="assets/img/Log-06.svg" alt="send a message"></a>
     </div>
 
     <footer class="container">

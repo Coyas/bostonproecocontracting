@@ -21,7 +21,7 @@ figcaption {
     background-color: black;
 }
 .tel a {
-    background-color: green;
+    background-color: #26a747;
     color: white;
     padding: 0.5%;
 }
@@ -43,7 +43,7 @@ ul{
     font-weight: 300;
 }
 .text .cabe {
-    color: green;
+    color: #26a747;
     font-weight: bold;
     margin-bottom: 1.5%;
 }
@@ -72,9 +72,20 @@ footer {
     position: fixed;
     bottom: 15%;
     right: 12.1%;
-    color: green;
+    color: #26a747;
 }
 
 /**
 fim de index.html
 **/
+#sendMsg {
+    background-color: #5a6c85;
+    color: white;
+}
+#text {
+    background-color: white;
+    color: black;
+}
+#sendMsg .head {
+    font-weight: bold;
+}
