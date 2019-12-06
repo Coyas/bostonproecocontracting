@@ -24,10 +24,7 @@ if(isset($_POST['post'])) {
     $response = file_get_contents($url, false, $context);
     $res = json_decode($response, true);
     // print_r($res);
-    if($res['success'] == true) {
-        // Perform you logic here for ex:- save you data to database
-          echo 'sucess';
-    } else {
+    if($res['success'] != true) {
         echo 'falhada';
         exit;
     }
