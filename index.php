@@ -1,3 +1,13 @@
+<?php 
+// Start the session
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+  }
+
+  $_SESSION['guess'] = 'convidado';
+  echo $_SESSION['guess'];
+?>
+
 <!doctype html>
 <html lang="en">
   <head>

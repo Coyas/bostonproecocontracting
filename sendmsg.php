@@ -1,3 +1,13 @@
+
+<?php 
+// Start the session
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+  }
+  // echo $_SESSION['guess'];
+  echo $_POST['submit'];
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -30,22 +40,27 @@
 
           <div id="formu" class="row">
             <div class="col-md-12">
-              <div class="box">
-                <h5>CONTACT</h5>
-                <form action="send.php" method="POST">
-                  <div class="form-group">
-                    <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Full Name">
-                  </div>
-                  <div class="form-group">
-                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
-                  </div>
-                  <div class="form-group">
-                    <textarea name="message" class="form-control" id="message" rows="3" placeholder="Message"></textarea>
-                  </div>
-                  <button id="submit" type="submit" class="btn btn-primary">SEND MESSAGE</button>
-                </form>
-              </div>
-              
+              <?php if($_SESSION["msg"]){ ?>
+                <div class="alert <?= $_SESSION['alert'] ?>" role="alert">
+                  <?= $_SESSION["msg"] ?>
+                </div>
+              <?php }else { ?>
+                <div class="box">
+                  <h5>CONTACT</h5>
+                  <form action="send.php" method="POST">
+                    <div class="form-group">
+                      <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                      <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                      <textarea name="message" class="form-control" id="message" rows="3" placeholder="Message"></textarea>
+                    </div>
+                    <button id="submit" type="submit" class="btn btn-primary">SEND MESSAGE</button>
+                  </form>
+                </div>
+              <?php } ?>
               <p class="co1">
                 <i class="far fa-envelope"></i>  <a href="mailto:info@bostonecoprocontracting.com">info@bostonecoprocontracting.com</a>
               </p>

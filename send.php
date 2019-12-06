@@ -1,4 +1,11 @@
 <?php
+// Start the session
+if (session_status() !== PHP_SESSION_ACTIVE) {
+  session_start();
+  
+}
+echo $_SESSION['guess'];
+
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -32,15 +39,15 @@ function test_input($data) {
 $mail = new PHPMailer(true);
 
 try {
-    echo "enviando email";
-    echo "<br>" . $to . "<br>";
-    echo $subject . "<br>";
-    echo $message . "<br>";
+    // echo "enviando email";
+    // echo "<br>" . $to . "<br>";
+    // echo $subject . "<br>";
+    // echo $message . "<br>";
   
-    echo "enviando email...";
+    // echo "enviando email...";
 
     //Server settings
-    $mail->SMTPDebug  = SMTP::DEBUG_SERVER;                     // Enable verbose debug output
+    // $mail->SMTPDebug  = SMTP::DEBUG_SERVER;                     // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'mail.bostonecoprocontracting.com';     // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -71,9 +78,18 @@ try {
     $mail->AltBody = $stripedText;
 
     $mail->send();
-    echo 'Message has been sent';
+    // echo 'Message has been sent';
+    $_SESSION['msg'] = "The email was sent successfully";
+    $_SESSION['alert'] = "alert-success";
+    
+    header("Location: sendmsg.php");
+    exit;
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    $_SESSION['msg'] = "Message could not be sent. try again later";
+    $_SESSION['alert'] = "alert-danger";
+    header("Location: sendmsg.php");
+    exit;
+    //{$mail->ErrorInfo}";
 }
 
 ?>
