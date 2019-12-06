@@ -3,8 +3,8 @@
     if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
     }
-    // unset($_SESSION['alert']);
-    // unset($_SESSION['msg']);
+    unset($_SESSION['alert']);
+    unset($_SESSION['msg']);
     if($_SESSION['email'] == false){
         unset($_SESSION['alert']);
     }
