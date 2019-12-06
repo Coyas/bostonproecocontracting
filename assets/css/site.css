@@ -89,3 +89,140 @@ fim de index.html
 #sendMsg .head {
     font-weight: bold;
 }
+#sendMsg .col-md-4 {
+    max-width: 33.333% !important;
+}
+
+#sendMsg .row {
+    padding: 5%;
+}
+#sendMsg li:first-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 3%;
+}
+#sendMsg li:last-child {
+    font-size: 0.9rem;
+}
+#sendMsg li:last-child a {
+    color: white;
+    text-decoration: none;
+}
+#sendMsg li:last-child:hover > * {
+    color: #26a747;
+}
+#formu {
+    margin-top: -7%;
+}
+#formu .col-md-12 {
+    text-align: center;
+    padding: 5%;
+}
+#formu .box {
+    background-color: #26a747;
+    padding: 5%;
+    border-radius: 25px;
+    margin-bottom: 5%;
+}
+#formu h5 {
+    margin-bottom: 5%;
+}
+#formu input, #formu textarea {
+    background-color: #378755;
+    border: none;
+    border-radius: 5px;
+}
+.box button {
+    color: #000000;
+    background-color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 2% 4% 2% 4%;
+    border:none;
+}
+#submit:hover  {
+    color: #26a747;
+    background-color: #bef49b;
+}
+.con1 {
+    font-size: 0.84rem;
+    margin-top: -2%;
+    color: white;
+}
+.co1 a {
+    color: white !important;
+}
+.con1 a {
+    color: white !important;
+}
+.con1 img {
+    background-color: #000000;
+}
+
+.tel1 a {
+    background-color: #000000;
+    color: white !important;
+    padding: 0.5%;
+    text-decoration: none;
+    font-weight: bold;
+}
+.fya {
+    margin-right: 1%;
+}
+::-webkit-input-placeholder { /* Edge */
+    color: #bef49b !important;
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #bef49b !important;
+}
+  
+::placeholder {
+    color: #bef49b !important;
+}
+input, textarea {
+    color: #FFFFFF !important;
+}
+input:focus, textarea:focus {
+    color: #FFFFFF !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+/******
+seccao 2
+********/
+#text {
+    padding: 0% 5% 0% 5%;
+}
+#text .p {
+    color: #a8a8a8;
+}
+#text .s {
+    padding: 3% 0 3% 0;
+}
+#text .s i {
+    color: #26a747;
+}
+#text .d > * {
+    color: #26a747;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 100%;
+    margin-bottom: 2%;
+}
+#text img {
+    width: 60%;
+}
+#text .e > * {
+    color: #000000;
+    font-size: 0.9rem;
+    line-height: 150%;
+}
+.footer {
+    color: #a8a8a8;
+}

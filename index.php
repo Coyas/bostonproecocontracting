@@ -57,7 +57,7 @@
 
     <div class="msg">
         <i class="fas fa-long-arrow-alt-down"></i>
-        <a href="#"><img src="assets/img/Log-06.svg" alt="send a message"></a>
+        <a href="sendmsg.php"><img src="assets/img/Log-06.svg" alt="send a message"></a>
     </div>
 
     <footer class="container">
