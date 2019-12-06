@@ -4,7 +4,6 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
   session_start();
   
 }
-echo $_SESSION['guess'];
 
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
@@ -47,7 +46,7 @@ try {
     // echo "enviando email...";
 
     //Server settings
-    // $mail->SMTPDebug  = SMTP::DEBUG_SERVER;                     // Enable verbose debug output
+    $mail->SMTPDebug  = SMTP::DEBUG_SERVER;                     // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'mail.bostonecoprocontracting.com';     // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -81,12 +80,14 @@ try {
     // echo 'Message has been sent';
     $_SESSION['msg'] = "The email was sent successfully";
     $_SESSION['alert'] = "alert-success";
+    $_SESSION['email'] = true;
     
     header("Location: sendmsg.php");
     exit;
 } catch (Exception $e) {
     $_SESSION['msg'] = "Message could not be sent. try again later";
     $_SESSION['alert'] = "alert-danger";
+    $_SESSION['email'] = false;
     header("Location: sendmsg.php");
     exit;
     //{$mail->ErrorInfo}";

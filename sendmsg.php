@@ -4,8 +4,8 @@
 if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
   }
-  // echo $_SESSION['guess'];
-  echo $_POST['submit'];
+
+
 ?>
 
 <!doctype html>
@@ -23,6 +23,10 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     
 
     <title>Send Message - Boston Eco Pro Contracting</title>
+
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lefe8YUAAAAALOTrfLlvRV7VwF-aKXbw2k1IqNo"></script>
+    
   </head>
   <body>
 
@@ -40,7 +44,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
           <div id="formu" class="row">
             <div class="col-md-12">
-              <?php if($_SESSION["msg"]){ ?>
+              <?php if($_SESSION["alert"]){ ?>
                 <div class="alert <?= $_SESSION['alert'] ?>" role="alert">
                   <?= $_SESSION["msg"] ?>
                 </div>
@@ -48,6 +52,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                 <div class="box">
                   <h5>CONTACT</h5>
                   <form action="send.php" method="POST">
+                    <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
                     <div class="form-group">
                       <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Full Name">
                     </div>
@@ -128,6 +133,14 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
   </section>
 
     <!-- Optional JavaScript -->
+    <script>
+      grecaptcha.ready(function() {
+          grecaptcha.execute('6Lefe8YUAAAAALOTrfLlvRV7VwF-aKXbw2k1IqNo', {action: 'homepage'}).then(function(token) {
+            console.log(token)
+            document.getElementById("g-recaptcha-response").value = token;
+          });
+      });
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
