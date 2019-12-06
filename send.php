@@ -6,7 +6,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 }
 
 if(isset($_POST['post'])) {
-    print_r($_POST);
+    // print_r($_POST);
     $url = "https://www.google.com/recaptcha/api/siteverify";
 	$data = [
         'secret' => "6Lefe8YUAAAAAKwIimCkXj06AZ75xzOmFDO4lnQ8",
@@ -25,7 +25,7 @@ if(isset($_POST['post'])) {
     $res = json_decode($response, true);
     // print_r($res);
     if($res['success'] != true) {
-        echo 'falhada';
+        // echo 'falhada';
         exit;
     }
 }
