@@ -40,18 +40,18 @@ try {
     echo "enviando email...";
 
     //Server settings
-    $mail->SMTPDebug  = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+    $mail->SMTPDebug  = SMTP::DEBUG_SERVER;                     // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host       = 'smtp.googlemail.com';                    // Set the SMTP server to send through
+    $mail->Host       = 'mail.bostonecoprocontracting.com';     // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'adidas.coyas@gmail.com';                     // SMTP username
-    $mail->Password   = #TS&coyas#11';                               // SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-    $mail->Port       = 465;//587;                                    // TCP port to connect to
+    $mail->Username   = 'info@bostonecoprocontracting.com';     // SMTP username
+    $mail->Password   = 'boston12pro1eco';                      // SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+    $mail->Port       = 465;                             // TCP port to connect to
 
     //Recipients
-    $mail->setFrom("adidas.coyas@gmail.com");
-    $mail->addAddress($to, $nome);     // Add a recipient
+    $mail->setFrom($to);
+    $mail->addAddress($mail->Username, $nome);     // Add a recipient
     // $mail->addAddress('adidas.coyas@gmail.com');               // Name is optional
     // $mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');
