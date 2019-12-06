@@ -11,7 +11,7 @@ if(isset($_POST['post'])) {
 	$data = [
         'secret' => "6Lefe8YUAAAAAKwIimCkXj06AZ75xzOmFDO4lnQ8",
         'response' => $_POST['g-recaptcha-response'],
-        // 'remoteip' => $_SERVER['REMOTE_ADDR']
+        'remoteip' => $_SERVER['REMOTE_ADDR']
     ];
     $options = array(
         'http' => array(
