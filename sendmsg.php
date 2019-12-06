@@ -51,8 +51,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
               <?php }else { ?>
                 <div class="box">
                   <h5>CONTACT</h5>
-                  <form action="send.php" method="POST">
-                    <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+                  <form class="fo" action="send.php" method="POST">
+                    <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" >
                     <div class="form-group">
                       <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Full Name">
                     </div>
@@ -62,7 +62,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                     <div class="form-group">
                       <textarea name="message" class="form-control" id="message" rows="3" placeholder="Message"></textarea>
                     </div>
-                    <button id="submit" type="submit" class="btn btn-primary">SEND MESSAGE</button>
+                    <button id="submit" type="submit" class="btn btn-primary" name="post" value="POST">SEND MESSAGE</button>
                   </form>
                 </div>
               <?php } ?>

@@ -181,10 +181,10 @@ fim de index.html
 ::placeholder {
     color: #bef49b !important;
 }
-input, textarea {
+.fo div input, textarea {
     color: #FFFFFF !important;
 }
-input:focus, textarea:focus {
+.fo div input:focus, textarea:focus {
     color: #FFFFFF !important;
 }
 

@@ -5,6 +5,34 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
   
 }
 
+if(isset($_POST['post'])) {
+    print_r($_POST);
+    $url = "https://www.google.com/recaptcha/api/siteverify";
+	$data = [
+        'secret' => "6Lefe8YUAAAAAKwIimCkXj06AZ75xzOmFDO4lnQ8",
+        'response' => $_POST['g-recaptcha-response'],
+        // 'remoteip' => $_SERVER['REMOTE_ADDR']
+    ];
+    $options = array(
+        'http' => array(
+          'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+          'method'  => 'POST',
+          'content' => http_build_query($data)
+        )
+      );
+    $context  = stream_context_create($options);
+    $response = file_get_contents($url, false, $context);
+    $res = json_decode($response, true);
+    // print_r($res);
+    if($res['success'] == true) {
+        // Perform you logic here for ex:- save you data to database
+          echo 'sucess';
+    } else {
+        echo 'falhada';
+        exit;
+    }
+}
+// die;
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -46,7 +74,7 @@ try {
     // echo "enviando email...";
 
     //Server settings
-    $mail->SMTPDebug  = SMTP::DEBUG_SERVER;                     // Enable verbose debug output
+    // $mail->SMTPDebug  = SMTP::DEBUG_SERVER;                     // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'mail.bostonecoprocontracting.com';     // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
