@@ -30,7 +30,7 @@
 */
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
+  
 }
 
 /* 
@@ -39,7 +39,33 @@
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
+  #nav {
+    display: none;
+}
 
+figcaption {
+    font-size: 3rem;
+}
+
+.imgcentro {
+    width: 100% !important;
+}
+
+#hfoot {
+    font-size: 0.9rem;
+}
+
+.msg img {
+    width: 20%;
+    bottom: 2%;
+    right: 4%;
+}
+.msg i {
+    /* width: 15%; */
+    bottom: 13%;
+    right: 12.1%;
+    /* color: #26a747; */
+}
 }
 
 /* 
