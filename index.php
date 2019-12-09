@@ -20,6 +20,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/site.css">
+    <link rel="stylesheet" href="assets/css/homemedia.css">
     <link rel="shortcut icon" href="assets/img/Log-04.svg" >
     <script src="https://kit.fontawesome.com/f5dad94487.js" crossorigin="anonymous"></script>
     
@@ -96,7 +97,7 @@
 
     <footer class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div id="hfoot" class="col-md-12">
                 &copy; <?= Date('Y'); ?> Home Boston Eco Pro Contracting
             </div>
         </div>
