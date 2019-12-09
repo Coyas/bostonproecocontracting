@@ -54,7 +54,7 @@
     <nav id="nav" class="container">
         <div class="row align-items-center">
             <div class="col-md-2 logo">
-                <a class="" href="index.html">
+                <a class="" href="index.php">
                     <img src="assets/img/Log-02.svg" width="120" height="120" class="d-inline-block align-top" alt="">
                 </a>
             </div>
