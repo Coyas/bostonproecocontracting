@@ -1,0 +1,12 @@
+version: "3"
+
+services: 
+    boston:
+        build: . #docker build .
+        #command: #comando que ira rodar a aplicacao
+        ports: 
+            #porta da host: porta do docker
+            - "80:80"
+        volumes: 
+            #dir atual (.) com /var/www/html (do docker)
+            - .:/var/www/html
